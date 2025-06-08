@@ -46,5 +46,18 @@ class VagaController
         }
     }
 
+    public function getRanking($id)
+    {
+        $model = new CandidaturaModel();
+        $ranking = $model->getRankingPorVaga($id);
+
+        if (empty($ranking)) {
+            http_response_code(404);
+            return;
+        }
+
+        http_response_code(200);
+        echo json_encode($ranking);
+    }
     
 }
