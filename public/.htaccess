@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /recrutamento-api/public/
+
+# Redireciona todas as requisições para o index.php, exceto arquivos e diretórios existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^ index.php [QSA,L]
