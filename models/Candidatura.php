@@ -67,6 +67,7 @@ class Candidatura {
             return false;
         }
 
+        try {
             $query = "INSERT INTO candidaturas (id, id_vaga, id_pessoa)
                       VALUES (:id, :id_vaga, :id_pessoa)";
             $stmt = $this->conn->prepare($query);
@@ -76,7 +77,10 @@ class Candidatura {
 
             return $stmt->execute();
 
-        
+        } catch (PDOException $e) {
+            error_log("Erro ao salvar candidatura: " . $e->getMessage());
+            return false;
+        }
     }
 }
 ?>
