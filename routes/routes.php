@@ -26,6 +26,11 @@ if (preg_match('#/candidaturas$#', $uri) && $method === 'POST') {
     exit;
 }
 
+if (preg_match('#^/vagas/([a-f0-9\-]+)/candidaturas/ranking$#', $uri, $matches) && $method === 'GET') {
+    $controller = new VagaController();
+    $controller->getRanking($matches[1]);
+    exit;
+}
 
 // Caso não encontre rota
 http_response_code(404);
