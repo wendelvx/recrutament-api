@@ -60,5 +60,8 @@ class CandidaturaModel {
         return is_infinite($dist) ? -1 : intval($dist);
     }
 
+    public function getRankingporVaga($id){
+        echo "teste";
+    }
 }
 ?>
