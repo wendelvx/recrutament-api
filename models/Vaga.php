@@ -58,7 +58,7 @@ class Vaga
 
    public function salvar()
 {
-
+try{
     $db = new Database();
     $pdo = $db->connect();
 
@@ -66,10 +66,14 @@ class Vaga
                            VALUES (?, ?, ?, ?, ?, ?)");
     return $stmt->execute([
         $this->id, $this->empresa, $this->titulo,
-        $this->descricao, $this->localizacao, $this->nivel
+        $this->descricao, strtoupper($this->localizacao), (int)$this->nivel
     ]);
     
- 
+} catch(PDOException $e) {
+        error_log("Erro ao salvar Vaga: " . $e->getMessage());
+        return false; 
+    }
+
     
 }
 

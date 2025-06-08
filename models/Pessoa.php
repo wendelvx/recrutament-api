@@ -46,6 +46,7 @@ class Pessoa {
     }
 
     public function salvar() {
+        try{
             $db = new Database();
         $pdo = $db->connect();
 
@@ -54,11 +55,14 @@ class Pessoa {
             $this->id,
             $this->nome,
             $this->profissao,
-            $this->localizacao,
-            $this->nivel
+            strtoupper($this->localizacao),
+            (int)$this->nivel
         ]);
 
-        
+        } catch(PDOException $e) {
+        error_log("Erro ao salvar Pessoa: " . $e->getMessage());
+        return false; 
+    }
     }
 }
 
