@@ -34,5 +34,5 @@ if (preg_match('#^/vagas/([a-f0-9\-]+)/candidaturas/ranking$#', $uri, $matches) 
 
 // Caso não encontre rota
 http_response_code(404);
-echo json_encode(["erro" => "Endpoint não encontrado"]);
+
 ?>
