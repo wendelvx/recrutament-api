@@ -13,7 +13,8 @@ class Pessoa {
         $this->localizacao = $dados['localizacao'] ?? null;
         $this->nivel = $dados['nivel'] ?? null;
     }
-
+//O array de erros foi usado para verificar se as funcionalidades estavão funcionando no controller.
+//Na versão final as mensagens de erro não foram utilizadas devido um dos requisitos da avaliação ser não ter nenhum corpo na resposta.
     public function validar() {
         $erros = [];
 
