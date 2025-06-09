@@ -24,6 +24,7 @@ Esta API ajuda recrutadores a analisar candidaturas com base no nível de experi
 
 ## Observações
 
+-Usado XAMMP para facilitar a realização da atividade.
 -Ao vizualizar o projeto percebe-se que foi criado um array de erros nos models, mas não foi usado no controller. Isto se dá, pois um dos requisitos do desafio é justamente devolver o código de resposta sem corpo.
 
 ## Como rodar o projeto
