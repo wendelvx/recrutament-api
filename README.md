@@ -32,3 +32,7 @@ Esta API ajuda recrutadores a analisar candidaturas com base no nível de experi
 1. Clone o repositório:
    ```bash
    git clone https://github.com/wendelvx/recrutament-api
+
+- Crie o banco de dados com as especificações do desafio.
+-Utilize algum software como xammp, caso queria facilitar o processo.
+-Divirta-se :)
