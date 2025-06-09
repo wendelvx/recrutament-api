@@ -31,4 +31,4 @@ Esta API ajuda recrutadores a analisar candidaturas com base no nível de experi
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/wendelvx/recrutament-api
